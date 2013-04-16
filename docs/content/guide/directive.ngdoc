@@ -2,6 +2,7 @@
 @name Directives
 @description
 
+Directives는 HTML의 새로운 속임수를 알려주는 방법입니다.
 Directives are a way to teach HTML new tricks. During DOM compilation directives are matched
 against the HTML and executed. This allows directives to register behavior, or transform the DOM.
 
