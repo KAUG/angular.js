@@ -3,6 +3,7 @@
 @description
 
 # What is a Module?
+모듈이란?
 
 Most applications have a main method which instantiates, wires, and bootstraps the application.
 Angular apps don't have a main method. Instead modules declaratively specify how an application
