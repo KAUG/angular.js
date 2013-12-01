@@ -2,13 +2,19 @@
 @name Tutorial: Index
 @description
 
+<!--
 A great way to get introduced to AngularJS is to work through this tutorial, which walks you through
 the construction of an AngularJS web app. The app you will build is a catalog that displays a list
 of Android devices, lets you filter the list to see only devices that interest you, and then view
 details for any device.
+-->
+
+AngularJS를 배우는 가장 좋은 방법은 이 튜토리얼을 따라해보며 AngularJS 웹 앱을 한번 만들어 보는 것이다. 
+만들어볼 앱은 안드로이드 휴대폰 목록을 보여주는 앱으로, 보고싶은 휴대폰만 필터링해서 자세한 정보를 볼 수 있는 구조로 되어있다.
 
 <img class="diagram" src="img/tutorial/catalog_screen.png" width="488" height="413">
 
+<!--
 Work through the tutorial to see how Angular makes browsers smarter — without the use of extensions
 or plug-ins. As you work through the tutorial, you will:
 
@@ -37,20 +43,49 @@ suggestions for you to learn more about AngularJS and the application you are bu
 You can go through the whole tutorial in a couple of hours or you may want to spend a pleasant day
 really digging into it. If you're looking for a shorter introduction to AngularJS, check out the
 {@link misc/started Getting Started} document.
+-->
 
+튜토리얼을 따라가면서 별다른 플러그인이나 확장 모듈 없이 AngularJS가 어떻게 브라우저를 더 똑똑하게 만드는지 알아볼 것이다. 
+튜토리얼을 통해 배울 수 있는 것은 다음과 같다.
 
+* 클라이언트 데이터 바인딩과 의존성 주입을 하는 법에 대한 예제를 통해 사용자 동작에 따른 데이터 변화를 바로 반영하는 동적 뷰를 만드는 방법
+* Angular에서 DOM을 조작하지 않고도 데이터에 대한 리스너를 생성하는 방법
+* 웹 앱을 테스트하기 위한 쉽고 더 나은 방법
+* 앱에서 데이터를 가져오는 것과 같은 일반적인 작업을 Angular 서비스를 사용하여 더 쉽게 하는 방법
 
+그리고 이 모든 것들이 특정 브라우저만을 위한 코드없이도 어떠한 브라우저에서든 문제없이 돌아 간다는 것도 살펴보게 될 것이다.
 
+이 튜토리얼을 끝마치면 다음과 같은 일들을 할 수 있다:
 
+* 모든 브라우저에서 돌아가는 동적 애플리케이션 만들기
+* Angular와 다른 자바스크립트 프레임워크의 차이점 이해
+* AngularJS의 데이터 바인딩 동작 방식 이해
+* angular-seed 프로젝트를 사용해서 개인 프로젝트를 빠르게 셋업하기
+* 테스트를 작성하고 실행하기
+* AngularJS 심화 학습 자료
 
+튜토리얼을 통해 간단한 애플리케이션을 만드는 전체 과정은 물론 단위 테스트와 종단간 테스트를 잘 작성하고 실행하는 것까지 배울 수 있을 것이다. 
+각 단계 마지막에 제공되는 "시험 삼아 해보기" 과정을 통해 AngularJS와 만들어 볼 애플리케이션을 더 심도 깊게 이해할 수 있을 것이다.
 
+몇 시간만에 이 튜토리얼을 독파할 수도 있지만 이 과정을 조금 깊게 파면서 즐거운 하루를 보낼 수 도 있겠다. 
+혹시 조금 더 짧은 AngularJS 설명서를 찾고있다면 {@link misc/started 시작하기}를 확인해보자.
+
+<!--
 # Working with the code
 
 You can follow this tutorial and hack on the code in either the Mac/Linux or the Windows
 environment. The tutorial relies on the use of Git versioning system for source code management.
 You don't need to know anything about Git to follow the tutorial. Select one of the tabs below
 and follow the instructions for setting up your computer.
+-->
 
+# 코드 가지고 놀기
+
+맥이나 리눅스, 윈도우 상관없이 이 코드를 가지고 놀면서 튜토리얼을 따라올 수 있을 것이다. 
+튜토리얼은 소스 코드 버전관리를 위해 Git을 사용하고 있는데 튜토리얼을 따라감에 있어서 Git을 꼭 알 필요는 없다.
+일단 아래 탭 중에서 여러분의 컴퓨터 환경에 맞는 설명을 선택하자.
+
+<!--
 <div class="tabbable" show="true">
   <div class="tab-pane well" id="git-mac" title="Git on Mac/Linux">
     <ol>
@@ -111,8 +146,55 @@ already installed, you can use <code>node</code> to run <code>scripts\web-server
 bundled http server.</p></li>
     </ol>
   </div>
+-->
 
+<div class="tabbable" show="true">
+  <div class="tab-pane well" id="git-mac" title="Git on Mac/Linux">
+    <ol>
+      <li><p>Git이 설치되어있지 않다면 <a href="http://git-scm.com/download">Git사이트</a>에서 내려받자.</p></li>
+      <li><p><a href="https://github.com/angular/angular-phonecat">Github</a>의 angular-phonecat 저장소를 다음 명령을 이용해서 clone 하자.</p>
+      <pre>git clone https://github.com/angular/angular-phonecat.git</pre>
+      <p>이 명령은 현재 디렉토리에 <code>angular-phonecat</code> 디렉토리를 생성할 것이다.</p></li>
+      <li><p><code>angular-phonecat</code> 디렉토리로 이동하자:</p>
+      <pre>cd angular-phonecat</pre>
+      <p>이후부터는 <code>angular-phonecat</code> 디렉토리에서 명령을 실행한다고 가정하고 설명하겠다.</p></li>
+      <li><p>단위 테스트를 실행하려면 <a href="http://nodejs.org/">Node.js</a> 와 Karma가 필요하므로 다음 명령을 통해서 v0.10 이상의 Node.js 가 설치되었는지 확인하자. 그리고 설치파일인 <code>node</code>가 <code>PATH</code>에 잡혀있는지도 확인하자.</p></li>
+      <pre>node --version</pre>
+      <p>그리고 설치 안했으면 <a href="http://karma-runner.github.io/">Karma</a>와 나머지 플러그인도 역시 설치해주자.:</p>
+      <pre>
+      npm install -g karma
+      npm install
+      </pre></li>
+      <li><p>http 서버를 하나 돌려야할 수도 있다. 맥이나 리눅스라면 보통 아파치가 미리 설치되어 있지만 혹시 없다면 <code>node</code>로 <code>scripts/web-server.js</code>를 실행해서 기본 포함된 http 서버를 사용해도 된다.</p></li>
+    </ol>
+  </div>
+
+  <div class="tab-pane well" id="git-win" title="Git on Windows">
+    <ol>
+      <li><p>단위 테스트를 실행하려면 <a href="http://nodejs.org/">Node.js</a> 와 Karma가 필요하므로 다음 명령을 통해서 v0.8 이상의 Node.js 가 설치되었는지 확인하자. 그리고 설치파일인 <code>node</code>가 <code>PATH</code>에 잡혀있는지도 확인하자.</p>
+        <pre>node --version</pre>
+        <p>그리고 설치 안했으면 <a href="http://karma-runner.github.io/">Karma</a> 역시 설치해주자.:</p>
+        <pre>npm install -g karma</pre>
+      </li>
+      <li><p>Git이 설치되어있지 않다면 <a href="http://git-scm.com/download">Git사이트</a>에서 내려받자.</p></li>
+      <li><p><a href="https://github.com/angular/angular-phonecat">Github</a>의 angular-phonecat 저장소를 다음 명령을 이용해서 clone 하자.</p>
+      <pre>git clone https://github.com/angular/angular-phonecat.git</pre>
+      <p>이 명령은 현재 디렉토리에 <code>angular-phonecat</code> 디렉토리를 생성할 것이다.</p></li>
+      <li><p><code>angular-phonecat</code> 디렉토리로 이동하자:</p>
+      <pre>cd angular-phonecat</pre>
+      <p>이후부터는 <code>angular-phonecat</code> 디렉토리에서 명령을 실행한다고 가정하고 설명하겠다.</p>
+      <p>Git bash에서 모든 <code>git</code> 명령을 실행할 수 있어야 한다.</p>
+      <p><code>test.bat</code>나 <code>e2e-test.bat</code> 같은 명령은 윈도우 커맨드 라인에서 실행해야 한다.</li>
+      <li><p>http 서버를 하나 돌려야할 수도 있다. 혹시 없다면 <code>node</code>로 <code>scripts/web-server.js</code>를 실행해서 기본 포함된 http 서버를 사용해도 된다.</p></li>
+    </ol>
+  </div>
+
+<!--
 The last thing to do is to make sure your computer has a web browser and a good text editor
 installed. Now, let's get some cool stuff done!
 
 {@link step_00 <span class="btn btn-primary">Get Started!</span>}
+-->
+
+이제 남은 일은 웹 브라우저와 마음에 드는 텍스트 편집기를 준비하는 일이다! 자 이제 시작해보자!
+{@link step_00 <span class="btn btn-primary">시작하기!</span>}
